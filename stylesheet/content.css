@@ -278,15 +278,14 @@ button,
 .menu-item {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: white;
+    text-decoration: none;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 25px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
 .menu-item:hover {
-    background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
@@ -313,12 +312,16 @@ button,
 .posters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 3rem;
 }
 
 .poster-item {
-    text-align: center;
+    text-align: left;
+}
+
+.poster-item p {
+    color: var(--text-dark);
 }
 
 .poster-preview {
@@ -330,35 +333,9 @@ button,
     overflow: hidden;
 }
 
-.poster-1 {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    padding: 20px;
-}
-
-.poster-2 {
-    background: linear-gradient(135deg, #0f3460 0%, #e94560 100%);
-}
-
-.poster-3 {
-    background: linear-gradient(135deg, #2c3e50 0%, #fd79a8 100%);
-}
-
-.poster-4 {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.poster-5 {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
 
 .poster-nav {
-    text-align: center;
+    text-align: left;
 }
 
 .nav-btn {
@@ -374,14 +351,19 @@ button,
     min-height: 100vh;
 }
 
+.position {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .merch-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
 }
 
 .merch-item {
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 2rem;
@@ -393,69 +375,23 @@ button,
     transform: translateY(-5px);
 }
 
-.merch-image {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 1rem;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.tshirt {
-    background: linear-gradient(145deg, #8b7355, #6b5b47);
-    position: relative;
-}
-
-.release-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: var(--primary-red);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-}
-
-.beanie {
-    background: linear-gradient(145deg, #666, #444);
-}
-
-.drink {
-    background: linear-gradient(145deg, #ff4444, #cc3333);
-}
-
-.pills {
-    background: linear-gradient(145deg, #ff6666, #ff4444);
-}
-
-.quantity-tag {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: white;
-    color: var(--primary-red);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-}
-
 .merch-price {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
 .price {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: var(--primary-red);
+    color: var(--text-light);
 }
 
 .buy-btn {
-    background: var(--primary-red);
-    color: white;
+    font-family: ArticulatMedium, sans-serif, Arial;
+    color: var(--text-light);
+    font-size: 3rem;
     padding: 0.5rem 1rem;
     border-radius: 15px;
     transition: background 0.3s ease;

@@ -147,7 +147,6 @@ class SynapseApp {
         const originalColor = button.style.background;
 
         button.textContent = '(добавлено)';
-        button.style.background = '#28a745';
         button.disabled = true;
 
         setTimeout(() => {
