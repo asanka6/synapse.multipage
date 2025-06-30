@@ -519,8 +519,8 @@ button,
 
 /* Страница 404 */
 .error-page {
-    background: var(--red-gradient);
-    color: white;
+    background: linear-gradient(238deg, #617083 18.9%, #D1DAE3 83.36%);
+    color: var(--primary-red);
     display: flex;
     justify-content: center;
     align-items: center;
