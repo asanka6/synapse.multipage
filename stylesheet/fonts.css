@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'ArticulatMedium';
+    src: url(../fonts/ArticulatCF-Medium.otf);
+    font-weight: 400; 
+}
+
+@font-face {
+    font-family: 'ArticulatBold';
+    src: url(../fonts/ArticulatCF-Bold.otf);
+    font-weight: 700;
+}
