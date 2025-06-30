@@ -25,6 +25,13 @@ h1 {
     color: var(--text-light);
 }
 
+h2 {
+    font-family: ArticulatBold, sans-serif, Arial;
+    font-size: 3rem;
+    line-height: 7.35rem;
+    color: var(--text-light);
+}
+
 p {
     font-family: ArticulatMedium , sans-serif, Arial;
     font-size: 1.25rem;
@@ -186,6 +193,9 @@ button,
 }
 
 .price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 2rem;
@@ -297,7 +307,7 @@ button,
 
 /* Страница спринтер */
 .sprinter-page {
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    background: linear-gradient(238deg, #617083 18.9%, #D1DAE3 83.36%);
     color: white;
     padding: 40px;
     min-height: 100vh;
