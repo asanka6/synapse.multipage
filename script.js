@@ -9,7 +9,6 @@ class SynapseApp {
         this.initFormHandling();
         this.initPosterNavigation();
         this.initMerchHandling();
-        this.initGlitchEffects();
         this.initMouseTrail();
     }
 
@@ -158,24 +157,6 @@ class SynapseApp {
         }, 2000);
     }
 
-    // Глитч эффекты
-    initGlitchEffects() {
-        const glitchElements = document.querySelectorAll('.logo, h1, .menu-title');
-
-        glitchElements.forEach(element => {
-            setInterval(() => {
-                if (Math.random() > 0.95) {
-                    element.style.textShadow = '2px 0 #ff00ff, -2px 0 #00ffff';
-                    element.style.transform = 'translate(' + (Math.random() * 4 - 2) + 'px, ' + (Math.random() * 4 - 2) + 'px)';
-
-                    setTimeout(() => {
-                        element.style.textShadow = 'none';
-                        element.style.transform = 'translate(0, 0)';
-                    }, 150);
-                }
-            }, 100);
-        });
-    }
 
     // Эффект следа мыши
     initMouseTrail() {

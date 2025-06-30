@@ -18,27 +18,18 @@ body {
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3 {
-    color: var(--primary-red);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 h1 {
-    font-size: clamp(3rem, 10vw, 8rem);
-    filter: blur(2px);
-    transition: filter 0.3s ease;
+    font-family: ArticulatBold, sans-serif, Arial;
+    font-size: 8rem;
+    line-height: 7.35rem;
+    color: var(--text-light);
 }
 
-h1:hover {
-    filter: blur(0px);
-}
-
-h2 {
-    font-size: clamp(2rem, 6vw, 4rem);
-    margin-bottom: 2rem;
+p {
+    font-family: ArticulatMedium , sans-serif, Arial;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--text-light);
 }
 
 /* Кнопки и ссылки */
@@ -88,6 +79,13 @@ button,
     margin: -40px;
 }
 
+.logo {
+    position: absolute;
+    width: 90%;
+    margin: 0 70px;
+    margin-top: 10px;
+}
+
 .hero-text p {
     font-size: 20px;
     color: #494949;
@@ -101,36 +99,36 @@ button,
     margin-bottom: 4rem;
 }
 
+.capsules-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 300px;
+}
+
 .highlight {
     color: var(--primary-red);
 }
 
-.capsule-info {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.capsule-visual {
-    width: 250px;
-    height: 250px;
-    position: relative;
+.premium-capsule {
+    height: 800px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
 }
 
-.capsule-sphere {
-    width: 120px;
-    height: 160px;
-    background: linear-gradient(145deg, #ff6b6b, var(--primary-red));
-    border-radius: 60px;
-    position: relative;
-    box-shadow:
-        0 0 50px rgba(255, 68, 68, 0.3),
-        inset 0 0 30px rgba(0, 0, 0, 0.2);
-    animation: float 3s ease-in-out infinite;
+.premium-capsule p {
+    padding-top: 16%;
+    color: var(--text-dark);
+    width: 50%;
+}
+
+.premium-capsule img {
+    margin-left: -40px;
+    position: absolute;
+}
+
+.basic-capsule {
+    margin-top: -500px;
 }
 
 @keyframes float {
@@ -161,32 +159,18 @@ button,
     position: relative;
 }
 
-.premium-capsule {
-    background: radial-gradient(circle, var(--primary-red) 0%, var(--secondary-red) 100%);
+.sprinterlink_position {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: -80px;
 }
-
-.basic-capsule {
-    background: radial-gradient(circle, #ff6666 0%, var(--primary-red) 100%);
-}
-
-.basic-capsule::after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 80px;
-    height: 40px;
-    background: var(--primary-red);
-    border-radius: 20px;
-    transform: rotate(45deg);
-}
-
 .sprinter-link {
-    color: var(--text-dark);
-    text-decoration: underline;
-    font-size: 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 3rem;
     display: block;
-    margin-top: 1rem;
+    
 }
 
 /* Тарифы */
@@ -267,7 +251,7 @@ button,
 
 /* Страница меню */
 .menu-page {
-    background: var(--red-gradient);
+    background: linear-gradient(238deg, #617083 18.9%, #D1DAE3 83.36%);
     color: white;
     display: flex;
     flex-direction: column;
@@ -810,6 +794,8 @@ footer {
 }
 
 .footer-content {
+    height: 200px;
+    padding: 24px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
